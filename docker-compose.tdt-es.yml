@@ -1,0 +1,8 @@
+tdt-es-dlna:
+  container_name: tdt-es-dlna
+  image: pataquets/cohen3
+  command:
+    - "--noconfig"
+    - "--option=serverport:30020"
+    - "--plugins=backend:PlaylistStore,playlist_url:http://tdtchannels.com/lists/channels.m3u8,name:TDT"
+  net: host

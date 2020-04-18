@@ -4,5 +4,5 @@ tdt-es-dlna:
   command:
     - "--noconfig"
     - "--option=serverport:30020"
-    - "--plugins=backend:PlaylistStore,playlist_url:http://tdtchannels.com/lists/channels.m3u8,name:TDT"
+    - "--plugins=backend:PlaylistStore,playlist_url:${TDT_PLAYLIST_URL},name:TDT"
   net: host

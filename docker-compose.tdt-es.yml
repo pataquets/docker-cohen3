@@ -1,8 +1,10 @@
-tdt-es-dlna:
-  container_name: tdt-es-dlna
-  image: pataquets/cohen3
-  command:
-    - "--noconfig"
-    - "--option=serverport:30020"
-    - "--plugins=backend:PlaylistStore,playlist_url:${TDT_PLAYLIST_URL},name:TDT"
-  net: host
+version: "2.4"
+services:
+  tdt-es-dlna:
+    container_name: tdt-es-dlna
+    image: pataquets/cohen3
+    command:
+      - "--noconfig"
+      - "--option=serverport:30020"
+      - "--plugins=backend:PlaylistStore,playlist_url:${TDT_PLAYLIST_URL},name:TDT"
+    network_mode: host

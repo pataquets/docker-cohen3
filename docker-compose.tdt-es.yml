@@ -5,6 +5,6 @@ services:
     image: pataquets/cohen3
     command:
       - "--noconfig"
-      - "--option=serverport:30020"
+      - "--option=serverport:${TDT_SERVERPORT:-30020}"
       - "--plugins=backend:PlaylistStore,playlist_url:${TDT_PLAYLIST_URL},name:TDT"
     network_mode: host

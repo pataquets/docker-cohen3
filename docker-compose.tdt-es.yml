@@ -6,5 +6,5 @@ services:
     command:
       - "--noconfig"
       - "--option=serverport:${TDT_SERVERPORT:-30020}"
-      - "--plugins=backend:PlaylistStore,playlist_url:${TDT_PLAYLIST_URL},name:${TDT_NAME:-TDT}"
+      - "--plugins=backend:PlaylistStore,playlist_url:${TDT_PLAYLIST_URL},name:${TDT_NAME:-TDT},uuid:${TDT_UUID},logmode=info"
     network_mode: host
